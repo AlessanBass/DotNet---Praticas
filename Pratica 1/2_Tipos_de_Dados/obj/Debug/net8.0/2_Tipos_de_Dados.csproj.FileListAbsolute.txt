@@ -1,0 +1,15 @@
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\2_Tipos_de_Dados\bin\Debug\net8.0\2_Tipos_de_Dados.exe
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\2_Tipos_de_Dados\bin\Debug\net8.0\2_Tipos_de_Dados.deps.json
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\2_Tipos_de_Dados\bin\Debug\net8.0\2_Tipos_de_Dados.runtimeconfig.json
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\2_Tipos_de_Dados\bin\Debug\net8.0\2_Tipos_de_Dados.dll
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\2_Tipos_de_Dados\bin\Debug\net8.0\2_Tipos_de_Dados.pdb
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\2_Tipos_de_Dados\obj\Debug\net8.0\2_Tipos_de_Dados.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\2_Tipos_de_Dados\obj\Debug\net8.0\2_Tipos_de_Dados.AssemblyInfoInputs.cache
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\2_Tipos_de_Dados\obj\Debug\net8.0\2_Tipos_de_Dados.AssemblyInfo.cs
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\2_Tipos_de_Dados\obj\Debug\net8.0\2_Tipos_de_Dados.csproj.CoreCompileInputs.cache
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\2_Tipos_de_Dados\obj\Debug\net8.0\2_Tipos_de_Dados.sourcelink.json
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\2_Tipos_de_Dados\obj\Debug\net8.0\2_Tipos_de_Dados.dll
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\2_Tipos_de_Dados\obj\Debug\net8.0\refint\2_Tipos_de_Dados.dll
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\2_Tipos_de_Dados\obj\Debug\net8.0\2_Tipos_de_Dados.pdb
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\2_Tipos_de_Dados\obj\Debug\net8.0\2_Tipos_de_Dados.genruntimeconfig.cache
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\2_Tipos_de_Dados\obj\Debug\net8.0\ref\2_Tipos_de_Dados.dll

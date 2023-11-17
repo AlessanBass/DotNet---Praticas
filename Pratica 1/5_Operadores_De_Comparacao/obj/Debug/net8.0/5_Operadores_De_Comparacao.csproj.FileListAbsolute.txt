@@ -1,0 +1,15 @@
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\5_Operadores_De_Comparacao\bin\Debug\net8.0\5_Operadores_De_Comparacao.exe
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\5_Operadores_De_Comparacao\bin\Debug\net8.0\5_Operadores_De_Comparacao.deps.json
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\5_Operadores_De_Comparacao\bin\Debug\net8.0\5_Operadores_De_Comparacao.runtimeconfig.json
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\5_Operadores_De_Comparacao\bin\Debug\net8.0\5_Operadores_De_Comparacao.dll
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\5_Operadores_De_Comparacao\bin\Debug\net8.0\5_Operadores_De_Comparacao.pdb
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\5_Operadores_De_Comparacao\obj\Debug\net8.0\5_Operadores_De_Comparacao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\5_Operadores_De_Comparacao\obj\Debug\net8.0\5_Operadores_De_Comparacao.AssemblyInfoInputs.cache
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\5_Operadores_De_Comparacao\obj\Debug\net8.0\5_Operadores_De_Comparacao.AssemblyInfo.cs
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\5_Operadores_De_Comparacao\obj\Debug\net8.0\5_Operadores_De_Comparacao.csproj.CoreCompileInputs.cache
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\5_Operadores_De_Comparacao\obj\Debug\net8.0\5_Operadores_De_Comparacao.sourcelink.json
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\5_Operadores_De_Comparacao\obj\Debug\net8.0\5_Operadores_De_Comparacao.dll
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\5_Operadores_De_Comparacao\obj\Debug\net8.0\refint\5_Operadores_De_Comparacao.dll
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\5_Operadores_De_Comparacao\obj\Debug\net8.0\5_Operadores_De_Comparacao.pdb
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\5_Operadores_De_Comparacao\obj\Debug\net8.0\5_Operadores_De_Comparacao.genruntimeconfig.cache
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\5_Operadores_De_Comparacao\obj\Debug\net8.0\ref\5_Operadores_De_Comparacao.dll

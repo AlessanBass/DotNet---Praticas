@@ -1,0 +1,15 @@
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\7_Operadores_Logicos\bin\Debug\net8.0\7_Operadores_Logicos.exe
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\7_Operadores_Logicos\bin\Debug\net8.0\7_Operadores_Logicos.deps.json
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\7_Operadores_Logicos\bin\Debug\net8.0\7_Operadores_Logicos.runtimeconfig.json
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\7_Operadores_Logicos\bin\Debug\net8.0\7_Operadores_Logicos.dll
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\7_Operadores_Logicos\bin\Debug\net8.0\7_Operadores_Logicos.pdb
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\7_Operadores_Logicos\obj\Debug\net8.0\7_Operadores_Logicos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\7_Operadores_Logicos\obj\Debug\net8.0\7_Operadores_Logicos.AssemblyInfoInputs.cache
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\7_Operadores_Logicos\obj\Debug\net8.0\7_Operadores_Logicos.AssemblyInfo.cs
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\7_Operadores_Logicos\obj\Debug\net8.0\7_Operadores_Logicos.csproj.CoreCompileInputs.cache
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\7_Operadores_Logicos\obj\Debug\net8.0\7_Operadores_Logicos.sourcelink.json
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\7_Operadores_Logicos\obj\Debug\net8.0\7_Operadores_Logicos.dll
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\7_Operadores_Logicos\obj\Debug\net8.0\refint\7_Operadores_Logicos.dll
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\7_Operadores_Logicos\obj\Debug\net8.0\7_Operadores_Logicos.pdb
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\7_Operadores_Logicos\obj\Debug\net8.0\7_Operadores_Logicos.genruntimeconfig.cache
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 1\7_Operadores_Logicos\obj\Debug\net8.0\ref\7_Operadores_Logicos.dll
