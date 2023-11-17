@@ -1,0 +1,11 @@
+>>> Verificar a versão do .NET SDK instalada:
+    dotnet --version
+
+>>> Listar todas as versões do .NET SDK instaladas:
+    dotnet --list-sdks
+
+>>> Remover uma versão específica do .NET SDK:
+    dotnet --uninstall-sdk <version>
+
+>>> Atualizar para a versão mais recente do .NET SDK:
+    Baixe e execute o instalador mais recente do site oficial.
