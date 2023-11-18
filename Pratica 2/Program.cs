@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Data;
 using System.Data.Common;
 class Tarefa {
     private int id;
@@ -53,10 +54,10 @@ class Pratica002{
     static void Main(){
         int opcao = 0;
         List<Tarefa> tarefas = new List<Tarefa>();
-        
+        /* Verifica sempre se list está vazia */
 
         do{
-            exibeMenu();
+            ExibeMenu();
             opcao = int.Parse(Console.ReadLine());
 
             switch(opcao){
@@ -76,12 +77,12 @@ class Pratica002{
                     data = Console.ReadLine();
 
                     dataEmPartes = data.Split('/');
-                    dia = converteParaInt(dataEmPartes[0]);
-                    mes = converteParaInt(dataEmPartes[1]);
-                    ano = converteParaInt(dataEmPartes[2]);
+                    dia = ConverteParaInt(dataEmPartes[0]);
+                    mes = ConverteParaInt(dataEmPartes[1]);
+                    ano = ConverteParaInt(dataEmPartes[2]);
 
                     DateTime dataVencimento =  new DateTime(ano, mes, dia);
-                    if(tarefas.Count > 0){
+                    if(VerificaListVazia(tarefas) ){
                         id = tarefas.Last().Id +1;
                     }else{
                         id = 1;
@@ -94,40 +95,48 @@ class Pratica002{
                 break;
 
                 case 2:
-                    listaTarefas(tarefas);
+                    ListaTarefas(tarefas);
                 break;
 
                 case 3:
                     Console.WriteLine(">>> EXIBINDO ESTATISTICA <<<");
-                    exibeEstatisticas(tarefas);
+                    ExibeEstatisticas(tarefas);
                 break;
 
                 case 4:
                     int idTarefa, retorno;
-                    Console.WriteLine(">>> MARCAR COMO CONCLUIDA <<<");
-                    listaTarefasPendentes(tarefas);
-                    Console.WriteLine("Informe o id: ");
-                    idTarefa = int.Parse(Console.ReadLine());
-                    retorno = buscaTarefa(idTarefa, tarefas);
-                    if( retorno == -1){
-                        Console.WriteLine("Ops... tarefa não encontrada");
+                    if(VerificaListPendentesVazia(tarefas)){
+                        Console.WriteLine(">>> MARCAR COMO CONCLUIDA <<<");
+                        ListaTarefasPendentes(tarefas);
+                        Console.WriteLine("Informe o id: ");
+                        idTarefa = int.Parse(Console.ReadLine());
+                        retorno = BuscaTarefa(idTarefa, tarefas);
+                        if( retorno == -1){
+                            Console.WriteLine("Ops... tarefa não encontrada");
+                        }else{
+                            tarefas[retorno].Concluida = 1;
+                            Console.WriteLine("Tarefa alterada com sucesso!");
+                        }
                     }else{
-                        tarefas[retorno].Concluida = 1;
-                        Console.WriteLine("Tarefa alterada com sucesso!");
+                        Console.WriteLine("=== LISTA VAZIA === ");
                     }
                 break;
 
                 case 5:
-                    Console.WriteLine(">>> EXCLUIR TAREFA<<<");
-                    listaTarefas(tarefas);
-                    Console.WriteLine("Informe o id: ");
-                    idTarefa = int.Parse(Console.ReadLine());
-                    retorno = buscaTarefa(idTarefa, tarefas);
-                    if( retorno == -1){
-                        Console.WriteLine("Ops... tarefa não encontrada");
+                    if(VerificaListVazia(tarefas)){
+                        Console.WriteLine(">>> EXCLUIR TAREFA<<<");
+                        ListaTarefas(tarefas);
+                        Console.WriteLine("Informe o id: ");
+                        idTarefa = int.Parse(Console.ReadLine());
+                        retorno = BuscaTarefa(idTarefa, tarefas);
+                        if( retorno == -1){
+                            Console.WriteLine("Ops... tarefa não encontrada");
+                        }else{
+                            tarefas.RemoveAt(retorno);
+                            Console.WriteLine("Tarefa excluida com sucesso!");
+                        }
                     }else{
-                        tarefas.RemoveAt(retorno);
-                        Console.WriteLine("Tarefa excluida com sucesso!");
+                        Console.WriteLine("=== LISTA VAZIA === ");
                     }
                 break;
 
@@ -143,7 +152,7 @@ class Pratica002{
         }while(opcao != 6);
     }
 
-    static void exibeMenu(){
+    static void ExibeMenu(){
         Console.WriteLine(">>> GESTAO DE TAREFAS <<<");
         Console.WriteLine("[1] CRIAR TAREFA");
         Console.WriteLine("[2] LISTAR TAREFAS");
@@ -153,43 +162,51 @@ class Pratica002{
         Console.WriteLine("[6] SAIR");
     }
 
-    static int converteParaInt(string valor){
+    static int ConverteParaInt(string valor){
         return Convert.ToInt32(valor);
+
     }
 
-    static void listaTarefas(List<Tarefa> tarefas){
-        Console.WriteLine(">>> LISTANDO TAREFAS");
-        foreach(var tarefa in tarefas){
-            Console.WriteLine($"ID: {tarefa.Id}");
-            Console.WriteLine($"Titulo: {tarefa.Titulo}");
-            Console.WriteLine($"Descricao: {tarefa.Descricao}");
-            Console.WriteLine($"Data de Vencimento: { tarefa.DataVencimento}");
-            if(tarefa.Concluida == 0){
-                Console.WriteLine("Status: Pendente");
-            }else{
-                Console.WriteLine("Status: Concluida");
-            }
-            Console.WriteLine("================================");
-        }
-    }
-
-    static void listaTarefasPendentes(List<Tarefa> tarefas){
-        Console.WriteLine(">>> LISTANDO TAREFAS PENDENTES");
-        foreach(var tarefa in tarefas){
-            if(tarefa.Concluida == 0){
+    static void ListaTarefas(List<Tarefa> tarefas){
+        if(VerificaListVazia(tarefas)){
+            Console.WriteLine(">>> LISTANDO TAREFAS");
+            foreach(var tarefa in tarefas){
                 Console.WriteLine($"ID: {tarefa.Id}");
                 Console.WriteLine($"Titulo: {tarefa.Titulo}");
                 Console.WriteLine($"Descricao: {tarefa.Descricao}");
                 Console.WriteLine($"Data de Vencimento: { tarefa.DataVencimento}");
-                Console.WriteLine("Status: Pendente");
+                if(tarefa.Concluida == 0){
+                    Console.WriteLine("Status: Pendente");
+                }else{
+                    Console.WriteLine("Status: Concluida");
+                }
                 Console.WriteLine("================================");
             }
+        }else{
+            Console.WriteLine("=== LISTA VAZIA === ");
+        }
+    }
+
+    static void ListaTarefasPendentes(List<Tarefa> tarefas){
+        Console.WriteLine(">>> LISTANDO TAREFAS PENDENTES");
+        if(VerificaListVazia(tarefas)){
+            foreach(var tarefa in tarefas){
+                if(tarefa.Concluida == 0){
+                    Console.WriteLine($"ID: {tarefa.Id}");
+                    Console.WriteLine($"Titulo: {tarefa.Titulo}");
+                    Console.WriteLine($"Descricao: {tarefa.Descricao}");
+                    Console.WriteLine($"Data de Vencimento: { tarefa.DataVencimento}");
+                    Console.WriteLine("Status: Pendente");
+                    Console.WriteLine("================================");
+                }
+            }
+        }else{
+            Console.WriteLine("=== LISTA VAZIA === ");
         }
         
     }
 
-    static int buscaTarefa(int idTarefa, List<Tarefa> tarefas){
-
+    static int BuscaTarefa(int idTarefa, List<Tarefa> tarefas){
         for(int i = 0; i<tarefas.Count; i++){
             if(idTarefa == tarefas[i].Id){
                 return i;
@@ -198,7 +215,7 @@ class Pratica002{
         return -1;
     }
 
-    static void exibeDetalheTarefa(Tarefa tarefa){
+    static void ExibeDetalheTarefa(Tarefa tarefa){
         Console.WriteLine($"ID: {tarefa.Id}");
         Console.WriteLine($"Titulo: {tarefa.Titulo}");
         Console.WriteLine($"Descricao: {tarefa.Descricao}");
@@ -210,28 +227,49 @@ class Pratica002{
         }
     }
 
-    static void exibeEstatisticas(List<Tarefa> tarefas){
+    static void ExibeEstatisticas(List<Tarefa> tarefas){
         int numeroTarefas = tarefas.Count;
         int tarefasConcluidas = 0;
         int tarefasPendentes = 0;
 
-        foreach(var tarefa in tarefas){
-            if(tarefa.Concluida == 1){
-                tarefasConcluidas++;
-            }else{
-                tarefasPendentes++;
+        if(VerificaListVazia(tarefas)){
+            foreach(var tarefa in tarefas){
+                if(tarefa.Concluida == 1){
+                    tarefasConcluidas++;
+                }else{
+                    tarefasPendentes++;
+                }
             }
+            
+            Console.WriteLine("=================================");
+            Console.WriteLine($"Qtd de tarefas cadastradas: {numeroTarefas}");
+            Console.WriteLine($"Qtd de tarefas concluidas: {tarefasConcluidas}");
+            Console.WriteLine($"Qtd de tarefas pendentes: {tarefasPendentes}");
+            Console.WriteLine($"Tarefa mais antiga: ");
+            ExibeDetalheTarefa(tarefas.First());
+            Console.WriteLine($"Tarefa mais recente: ");
+            ExibeDetalheTarefa(tarefas.Last());
+            Console.WriteLine("=================================");
+        }else{
+            Console.WriteLine("=== LISTA VAZIA === ");
         }
 
-        Console.WriteLine("=================================");
-        Console.WriteLine($"Qtd de tarefas cadastradas: {numeroTarefas}");
-        Console.WriteLine($"Qtd de tarefas concluidas: {tarefasConcluidas}");
-        Console.WriteLine($"Qtd de tarefas pendentes: {tarefasPendentes}");
-        Console.WriteLine($"Tarefa mais antiga: ");
-        exibeDetalheTarefa(tarefas.First());
-        Console.WriteLine($"Tarefa mais recente: ");
-        exibeDetalheTarefa(tarefas.Last());
-        Console.WriteLine("=================================");
+
     }
 
+    static bool VerificaListVazia(List<Tarefa> tarefas){
+        if(tarefas.Count > 0){
+            return true;
+        }
+        return false;
+    }
+
+     static bool VerificaListPendentesVazia(List<Tarefa> tarefas){
+        foreach(var tarefa in tarefas){
+            if(tarefa.Concluida == 0){
+                return true;
+            }
+        }
+        return false;
+    }
 }
