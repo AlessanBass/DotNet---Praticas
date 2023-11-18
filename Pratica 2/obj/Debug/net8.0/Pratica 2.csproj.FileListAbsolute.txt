@@ -1,0 +1,15 @@
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 2\bin\Debug\net8.0\Pratica 2.exe
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 2\bin\Debug\net8.0\Pratica 2.deps.json
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 2\bin\Debug\net8.0\Pratica 2.runtimeconfig.json
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 2\bin\Debug\net8.0\Pratica 2.dll
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 2\bin\Debug\net8.0\Pratica 2.pdb
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 2\obj\Debug\net8.0\Pratica 2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 2\obj\Debug\net8.0\Pratica 2.AssemblyInfoInputs.cache
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 2\obj\Debug\net8.0\Pratica 2.AssemblyInfo.cs
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 2\obj\Debug\net8.0\Pratica 2.csproj.CoreCompileInputs.cache
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 2\obj\Debug\net8.0\Pratica 2.sourcelink.json
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 2\obj\Debug\net8.0\Pratica 2.dll
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 2\obj\Debug\net8.0\refint\Pratica 2.dll
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 2\obj\Debug\net8.0\Pratica 2.pdb
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 2\obj\Debug\net8.0\Pratica 2.genruntimeconfig.cache
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Pratica 2\obj\Debug\net8.0\ref\Pratica 2.dll
