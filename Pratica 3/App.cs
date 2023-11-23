@@ -26,7 +26,7 @@ public static class App{
                     break;
 
                     case 2:
-                        Console.WriteLine("Em construcao...");
+                        ConsultarProduto();
                     break;
 
                     case 3:
@@ -161,5 +161,55 @@ public static class App{
             Console.WriteLine("--------------------------------------------");
         }
     }
+    }
+
+    public static bool BuscaProduto(int id_desejado){
+        foreach(var produto in produtos){
+            if(id_desejado == produto.Id_produto){
+                return true;
+            }
+        }
+        throw new ProdutoNaoEncontrado();
+    }
+
+    public static void ConsultarProduto(){
+        int id_desejado;
+        if(produtos.Count == 0){
+            Console.WriteLine("Nenhum produto cadastrado");
+            return;
+        }
+        Console.WriteLine(">>> CONSULTA PRODUTO <<<");
+        Console.WriteLine("Informe o id do produto: ");
+        try
+            {
+                // Tenta converter a entrada para um número inteiro
+               id_desejado = Convert.ToInt32(Console.ReadLine());
+               if(BuscaProduto(id_desejado)){
+                    Console.WriteLine(">>> Exibindo Produto <<<");
+                    Console.WriteLine($"ID: {produtos[id_desejado].Id_produto}");
+                    Console.WriteLine($"Nome: {produtos[id_desejado].Nome_produto}");
+                    Console.WriteLine($"Quantidade em Estoque: {produtos[id_desejado].Qtd_estoque}");
+                    Console.WriteLine($"Preço Unitário: {produtos[id_desejado].Preco_unitario.ToString("F2")}");
+                    Console.WriteLine("--------------------------------------------");
+               }
+
+
+            }
+            catch (FormatException)
+            {
+                // Captura a exceção FormatException se a entrada não puder ser convertida para decimal
+                Console.WriteLine("Entrada inválida. Certifique-se de digitar um número decimal.");
+            }
+            catch (OverflowException)
+            {
+                // Captura a exceção OverflowException se a entrada for muito grande para ser armazenada em um decimal
+                Console.WriteLine("Entrada inválida. O número é muito grande.");
+            }
+            catch (Exception ex)
+            {
+                // Captura outras exceções não tratadas
+                Console.WriteLine("Ocorreu um erro: " + ex.Message);
+            }
+
     }
 }
