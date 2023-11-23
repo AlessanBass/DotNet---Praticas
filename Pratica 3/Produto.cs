@@ -3,11 +3,11 @@ class Produto{
     private int id_produto;
     private string nome_produto;
     private int qtd_estoque;
-    private float preco_unitario;
+    private double preco_unitario;
 
 
     // Construtor
-    public Produto(int id_produto, string nome_produto, int qtd_estoque, float preco_unitario)
+    public Produto(int id_produto, string nome_produto, int qtd_estoque, double preco_unitario)
     {
         this.id_produto = id_produto;
         this.nome_produto = nome_produto;
@@ -34,7 +34,7 @@ class Produto{
         set { qtd_estoque = value; }
     }
 
-    public float Preco_unitario
+    public double Preco_unitario
     {
         get { return preco_unitario; }
         set { preco_unitario = value; }
