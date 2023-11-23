@@ -1,16 +1,16 @@
-# Prática - 0002
+# Prática - 0003
 ## Motivação:
-Este projeto permitirá aos discentes praticar a aplicação de
-estruturas de controle de fluxo, manipulação de tipos de dados,
-trabalho com datas e a criação de um aplicativo de linha de
-comando útil para gerenciamento de tarefas, algo comum em
-muitos ambientes corporativos.
+Este projeto proporciona uma oportunidade prática para os
+discentes aplicarem e integrarem os conceitos de tuplas,
+expressões lambda, LINQ e tratamento de exceções em um
+contexto realista de gerenciamento de estoque, algo comum em
+ambientes corporativos e industriais
 
 ## Objetivo:
-Desenvolver um sistema de gerenciamento de tarefas que permita aos usuários criar,
-visualizar e gerenciar tarefas.
+Desenvolver um sistema de gerenciamento de estoque que utiliza conceitos de tuplas,
+expressões lambda, LINQ e tratamento de exceções.
 
-## Requisitos do Projeto:
+## Desenvolvimento:
 - O sistema deve permitir a criação de tarefas, incluindo um título, descrição e data de
 vencimento.
 - Deve ser possível listar todas as tarefas criadas.
