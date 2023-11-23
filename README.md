@@ -11,14 +11,36 @@ Desenvolver um sistema de gerenciamento de estoque que utiliza conceitos de tupl
 expressões lambda, LINQ e tratamento de exceções.
 
 ## Desenvolvimento:
-- O sistema deve permitir a criação de tarefas, incluindo um título, descrição e data de
-vencimento.
-- Deve ser possível listar todas as tarefas criadas.
-- Os usuários devem poder marcar tarefas como concluídas.
-- O sistema deve fornecer uma lista de tarefas pendentes e uma lista de tarefas
-  concluídas.
-- Os usuários devem ser capazes de excluir tarefas.
-- Implemente uma pesquisa que permita aos usuários encontrar tarefas com base em
- palavras-chave.
-- O sistema deve fornecer estatísticas básicas, como o número de tarefas concluídas e
-pendentes, a tarefa mais antiga e a tarefa mais recente.
+
+- **Produto:**
+  - Crie uma tupla representando um produto no estoque, contendo os
+  seguintes elementos: código do produto, nome do produto, quantidade
+  em estoque e preço unitário.
+
+- **Cadastro de Produtos:**
+  - Permita que o usuário cadastre novos produtos no estoque, informando
+  código, nome, quantidade e preço.
+  - Utilize tratamento de exceções para lidar com possíveis erros durante o
+  cadastro, como entradas inválidas.
+
+- **Consulta de Produtos:**
+  - Implemente uma função que permita ao usuário buscar um produto pelo
+  código. Caso o produto não exista, lance uma exceção personalizada
+  indicando que o produto não foi encontrado.
+
+- **Atualização de Estoque:**
+  - Crie funções que permitam a atualização da quantidade em estoque de um
+  produto, levando em consideração entradas ou saídas. Faça o tratamento lógico
+  para lidar com casos em que a quantidade atual seja insuficiente
+  para uma saída.
+
+- **Relatórios:**
+  - Utilize LINQ para gerar 3 relatórios:
+    1. Lista de produtos com quantidade em estoque abaixo de um
+    determinado limite informado pelo usuário.
+    1. Lista de produtos com valor entre um mínimo e um máximo informados
+    pelo usuário.
+    1. Informar o valor total do estoque e o valor total de cada produto de
+    acordo com seu estoque.
+
+
