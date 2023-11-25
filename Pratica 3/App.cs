@@ -1,12 +1,15 @@
 namespace pratica3;
 
-public static class App{
+public static class App
+{
     private static List<Produto> produtos = new List<Produto>();
 
-    public static void Menu(){
-       int opcao = -1;
+    public static void Menu()
+    {
+        int opcao = -1;
 
-        do{
+        do
+        {
             Console.WriteLine(">>> GERENCIAMENTO <<<");
             Console.WriteLine("[1] Cadastrar Produto");
             Console.WriteLine("[2] Consultar Produtos");
@@ -18,37 +21,38 @@ public static class App{
             try
             {
                 // Tenta converter a entrada para um número inteiro
-               opcao = Convert.ToInt32(Console.ReadLine());
+                opcao = Convert.ToInt32(Console.ReadLine());
 
-               switch(opcao){
+                switch (opcao)
+                {
                     case 1:
                         CadastroProduto();
-                    break;
+                        break;
 
                     case 2:
                         ConsultarProduto();
-                    break;
+                        break;
 
                     case 3:
-                        Console.WriteLine("Em construcao...");
-                    break;
+                        AtualizacaoEstoque();
+                        break;
 
                     case 4:
                         ListarProdutos();
-                    break;
+                        break;
 
                     case 5:
                         Console.WriteLine("Em construcao...");
-                    break;
+                        break;
 
                     case 0:
-                    break;
+                        break;
 
                     default:
                         Console.WriteLine("Opcao invalida");
-                    break;
+                        break;
 
-               }
+                }
             }
             catch (FormatException)
             {
@@ -66,12 +70,13 @@ public static class App{
                 Console.WriteLine("Ocorreu um erro: " + ex.Message);
             }
 
-        }while(opcao != 0);
+        } while (opcao != 0);
     }
 
-    public static void CadastroProduto(){
-        string nome_produto="";
-        int id_produto, qtd_estoque =0;
+    public static void CadastroProduto()
+    {
+        string nome_produto = "";
+        int id_produto, qtd_estoque = 0;
         double preco_unitario = 0.0;
 
         Console.WriteLine(">>> CADASTRO PRODUTO <<<");
@@ -90,126 +95,227 @@ public static class App{
         }
         Console.WriteLine("Informe a quantidade em estoque: ");
         try
-            {
-                // Tenta converter a entrada para um número inteiro
-               qtd_estoque = Convert.ToInt32(Console.ReadLine());
+        {
+            // Tenta converter a entrada para um número inteiro
+            qtd_estoque = Convert.ToInt32(Console.ReadLine());
 
-            }
-            catch (FormatException)
-            {
-                // Captura a exceção FormatException se a entrada não puder ser convertida para decimal
-                Console.WriteLine("Entrada inválida. Certifique-se de digitar um número decimal.");
-            }
-            catch (OverflowException)
-            {
-                // Captura a exceção OverflowException se a entrada for muito grande para ser armazenada em um decimal
-                Console.WriteLine("Entrada inválida. O número é muito grande.");
-            }
-            catch (Exception ex)
-            {
-                // Captura outras exceções não tratadas
-                Console.WriteLine("Ocorreu um erro: " + ex.Message);
-            }
+        }
+        catch (FormatException)
+        {
+            // Captura a exceção FormatException se a entrada não puder ser convertida para decimal
+            Console.WriteLine("Entrada inválida. Certifique-se de digitar um número decimal.");
+        }
+        catch (OverflowException)
+        {
+            // Captura a exceção OverflowException se a entrada for muito grande para ser armazenada em um decimal
+            Console.WriteLine("Entrada inválida. O número é muito grande.");
+        }
+        catch (Exception ex)
+        {
+            // Captura outras exceções não tratadas
+            Console.WriteLine("Ocorreu um erro: " + ex.Message);
+        }
         Console.WriteLine("Informe o preco: ");
         try
-            {
-                // Tenta converter a entrada para um número inteiro
-               preco_unitario = Convert.ToDouble(Console.ReadLine());
-            }
-            catch (FormatException)
-            {
-                // Captura a exceção FormatException se a entrada não puder ser convertida para decimal
-                Console.WriteLine("Entrada inválida. Certifique-se de digitar um número decimal.");
-            }
-            catch (OverflowException)
-            {
-                // Captura a exceção OverflowException se a entrada for muito grande para ser armazenada em um decimal
-                Console.WriteLine("Entrada inválida. O número é muito grande.");
-            }
-            catch (Exception ex)
-            {
-                // Captura outras exceções não tratadas
-                Console.WriteLine("Ocorreu um erro: " + ex.Message);
-            }
-        if(produtos.Count == 0){
+        {
+            // Tenta converter a entrada para um número inteiro
+            preco_unitario = Convert.ToDouble(Console.ReadLine());
+        }
+        catch (FormatException)
+        {
+            // Captura a exceção FormatException se a entrada não puder ser convertida para decimal
+            Console.WriteLine("Entrada inválida. Certifique-se de digitar um número decimal.");
+        }
+        catch (OverflowException)
+        {
+            // Captura a exceção OverflowException se a entrada for muito grande para ser armazenada em um decimal
+            Console.WriteLine("Entrada inválida. O número é muito grande.");
+        }
+        catch (Exception ex)
+        {
+            // Captura outras exceções não tratadas
+            Console.WriteLine("Ocorreu um erro: " + ex.Message);
+        }
+        if (produtos.Count == 0)
+        {
             id_produto = 0;
-        }else{
+        }
+        else
+        {
             id_produto = produtos.Last().Id_produto + 1;
         }
 
         Produto produto = new Produto(id_produto, nome_produto, qtd_estoque, preco_unitario);
         produtos.Add(produto);
         Console.WriteLine("Produto cadastrado com sucesso!");
-        
+
     }
 
-    public static void ListarProdutos(){
+    public static void ListarProdutos()
+    {
         Console.WriteLine(">>> LISTAGEM DE PRODUTOS <<<");
 
-    if (produtos.Count == 0)
-    {
-        Console.WriteLine("Nenhum produto cadastrado.");
+        if (produtos.Count == 0)
+        {
+            Console.WriteLine("Nenhum produto cadastrado.");
+        }
+        else
+        {
+            foreach (var produto in produtos)
+            {
+                Console.WriteLine($"ID: {produto.Id_produto}");
+                Console.WriteLine($"Nome: {produto.Nome_produto}");
+                Console.WriteLine($"Quantidade em Estoque: {produto.Qtd_estoque}");
+                Console.WriteLine($"Preço Unitário: {produto.Preco_unitario.ToString("F2")}");
+                Console.WriteLine("--------------------------------------------");
+            }
+        }
     }
-    else
+
+    public static bool BuscaProduto(int id_desejado)
     {
         foreach (var produto in produtos)
         {
-            Console.WriteLine($"ID: {produto.Id_produto}");
-            Console.WriteLine($"Nome: {produto.Nome_produto}");
-            Console.WriteLine($"Quantidade em Estoque: {produto.Qtd_estoque}");
-            Console.WriteLine($"Preço Unitário: {produto.Preco_unitario.ToString("F2")}");
-            Console.WriteLine("--------------------------------------------");
-        }
-    }
-    }
-
-    public static bool BuscaProduto(int id_desejado){
-        foreach(var produto in produtos){
-            if(id_desejado == produto.Id_produto){
+            if (id_desejado == produto.Id_produto)
+            {
                 return true;
             }
         }
         throw new ProdutoNaoEncontrado();
     }
 
-    public static void ConsultarProduto(){
+    public static void ConsultarProduto()
+    {
         int id_desejado;
-        if(produtos.Count == 0){
+        if (produtos.Count == 0)
+        {
             Console.WriteLine("Nenhum produto cadastrado");
             return;
         }
         Console.WriteLine(">>> CONSULTA PRODUTO <<<");
         Console.WriteLine("Informe o id do produto: ");
         try
+        {
+            // Tenta converter a entrada para um número inteiro
+            id_desejado = Convert.ToInt32(Console.ReadLine());
+            if (BuscaProduto(id_desejado))
             {
-                // Tenta converter a entrada para um número inteiro
-               id_desejado = Convert.ToInt32(Console.ReadLine());
-               if(BuscaProduto(id_desejado)){
-                    Console.WriteLine(">>> Exibindo Produto <<<");
-                    Console.WriteLine($"ID: {produtos[id_desejado].Id_produto}");
-                    Console.WriteLine($"Nome: {produtos[id_desejado].Nome_produto}");
-                    Console.WriteLine($"Quantidade em Estoque: {produtos[id_desejado].Qtd_estoque}");
-                    Console.WriteLine($"Preço Unitário: {produtos[id_desejado].Preco_unitario.ToString("F2")}");
-                    Console.WriteLine("--------------------------------------------");
-               }
-
-
-            }
-            catch (FormatException)
-            {
-                // Captura a exceção FormatException se a entrada não puder ser convertida para decimal
-                Console.WriteLine("Entrada inválida. Certifique-se de digitar um número decimal.");
-            }
-            catch (OverflowException)
-            {
-                // Captura a exceção OverflowException se a entrada for muito grande para ser armazenada em um decimal
-                Console.WriteLine("Entrada inválida. O número é muito grande.");
-            }
-            catch (Exception ex)
-            {
-                // Captura outras exceções não tratadas
-                Console.WriteLine("Ocorreu um erro: " + ex.Message);
+                Console.WriteLine(">>> Exibindo Produto <<<");
+                Console.WriteLine($"ID: {produtos[id_desejado].Id_produto}");
+                Console.WriteLine($"Nome: {produtos[id_desejado].Nome_produto}");
+                Console.WriteLine($"Quantidade em Estoque: {produtos[id_desejado].Qtd_estoque}");
+                Console.WriteLine($"Preço Unitário: {produtos[id_desejado].Preco_unitario.ToString("F2")}");
+                Console.WriteLine("--------------------------------------------");
             }
 
+
+        }
+        catch (FormatException)
+        {
+            // Captura a exceção FormatException se a entrada não puder ser convertida para decimal
+            Console.WriteLine("Entrada inválida. Certifique-se de digitar um número decimal.");
+        }
+        catch (OverflowException)
+        {
+            // Captura a exceção OverflowException se a entrada for muito grande para ser armazenada em um decimal
+            Console.WriteLine("Entrada inválida. O número é muito grande.");
+        }
+        catch (Exception ex)
+        {
+            // Captura outras exceções não tratadas
+            Console.WriteLine("Ocorreu um erro: " + ex.Message);
+        }
+
+    }
+
+    public static void AtualizacaoEstoque()
+    {
+        /*  ListarProdutos(); */
+        int id_desejado = -1;
+        int estoque_atualizado;
+        if (produtos.Count == 0)
+        {
+            Console.WriteLine("Nenhum produto cadastrado");
+            return;
+        }
+        Console.WriteLine(">>> ATUALIZAR ESTOQUE <<<");
+        Console.WriteLine("Informe o id do produto: ");
+
+        try
+        {
+            // Tenta converter a entrada para um número inteiro
+            id_desejado = Convert.ToInt32(Console.ReadLine());
+            if (BuscaProduto(id_desejado))
+            {
+                Console.WriteLine(">>> Exibindo Produto <<<");
+                Console.WriteLine($"ID: {produtos[id_desejado].Id_produto}");
+                Console.WriteLine($"Nome: {produtos[id_desejado].Nome_produto}");
+                Console.WriteLine($"Quantidade em Estoque: {produtos[id_desejado].Qtd_estoque}");
+                Console.WriteLine($"Preço Unitário: {produtos[id_desejado].Preco_unitario.ToString("F2")}");
+                Console.WriteLine("--------------------------------------------");
+            }
+
+
+        }
+        catch (FormatException)
+        {
+            // Captura a exceção FormatException se a entrada não puder ser convertida para decimal
+            Console.WriteLine("Entrada inválida. Certifique-se de digitar um número decimal.");
+        }
+        catch (OverflowException)
+        {
+            // Captura a exceção OverflowException se a entrada for muito grande para ser armazenada em um decimal
+            Console.WriteLine("Entrada inválida. O número é muito grande.");
+        }
+        catch (Exception ex)
+        {
+            // Captura outras exceções não tratadas
+            Console.WriteLine("Ocorreu um erro: " + ex.Message);
+        }
+
+        /* 
+            Valor negativo é para saída
+            Valor positivo para entrada
+         */
+
+        try
+        {
+            // Tenta converter a entrada para um número inteiro
+            Console.WriteLine("Informe da quantia de saida/entrada: ");
+            estoque_atualizado = Convert.ToInt32(Console.ReadLine());
+            if (estoque_atualizado >= 0)
+            {
+                produtos[id_desejado].Qtd_estoque += estoque_atualizado;
+            }
+            else
+            {
+                if (produtos[id_desejado].Qtd_estoque >= Math.Abs(estoque_atualizado))
+                {
+                    produtos[id_desejado].Qtd_estoque += estoque_atualizado;
+                }
+                else
+                {
+                    Console.WriteLine($"Só temos apenas {produtos[id_desejado].Qtd_estoque} para saída");
+                    produtos[id_desejado].Qtd_estoque = 0;
+                }
+            }
+
+
+        }
+        catch (FormatException)
+        {
+            // Captura a exceção FormatException se a entrada não puder ser convertida para decimal
+            Console.WriteLine("Entrada inválida. Certifique-se de digitar um número decimal.");
+        }
+        catch (OverflowException)
+        {
+            // Captura a exceção OverflowException se a entrada for muito grande para ser armazenada em um decimal
+            Console.WriteLine("Entrada inválida. O número é muito grande.");
+        }
+        catch (Exception ex)
+        {
+            // Captura outras exceções não tratadas
+            Console.WriteLine("Ocorreu um erro: " + ex.Message);
+        }
     }
 }
