@@ -42,7 +42,7 @@ public static class App
                         break;
 
                     case 5:
-                        Console.WriteLine("Em construcao...");
+                        GerarRelatorios();
                         break;
 
                     case 0:
@@ -136,6 +136,7 @@ public static class App
             // Captura outras exceções não tratadas
             Console.WriteLine("Ocorreu um erro: " + ex.Message);
         }
+
         if (produtos.Count == 0)
         {
             id_produto = 0;
@@ -318,4 +319,94 @@ public static class App
             Console.WriteLine("Ocorreu um erro: " + ex.Message);
         }
     }
+
+    public static void GerarRelatorios()
+    {
+        int limiteQuantidade = 0;
+        double valorMaximo=0, valorMinimo=0, valorTotalEstoque = 0;
+
+        if(produtos.Count == 0){
+            Console.WriteLine("Nenhum produto cadastrado!");
+            return;
+        }
+
+        //1. Lista de produtos com quantidade em estoque abaixo de um determinado limite informado pelo usuário.
+        Console.Write("Informe o limite de quantidade em  estoque: ");
+        try
+        {
+            limiteQuantidade = int.Parse(Console.ReadLine() ?? "");
+            var produtosResultantes = produtos.Where(p => p.Qtd_estoque < limiteQuantidade);
+            Console.WriteLine($">>> Produtos com estoque abaxio de {limiteQuantidade}");
+            ImprimirRelatorio(produtosResultantes);
+        }
+        catch (FormatException)
+        {
+            // Captura a exceção FormatException se a entrada não puder ser convertida para decimal
+            Console.WriteLine("Entrada inválida. Certifique-se de digitar um número decimal.");
+        }
+        catch (OverflowException)
+        {
+            // Captura a exceção OverflowException se a entrada for muito grande para ser armazenada em um decimal
+            Console.WriteLine("Entrada inválida. O número é muito grande.");
+        }
+        catch (Exception ex)
+        {
+            // Captura outras exceções não tratadas
+            Console.WriteLine("Ocorreu um erro: " + ex.Message);
+        }
+
+        // 2. Lista de produtos com valor entre um mínimo e um máximo informados pelo usuário.
+        try{
+            Console.Write("\nInforme o valor mínimo: ");
+            valorMinimo = double.Parse(Console.ReadLine() ?? "");
+
+            Console.Write("Informe o valor máximo: ");
+            valorMaximo = double.Parse(Console.ReadLine() ?? "");
+
+            var produtosResultantes = produtos.Where(p => p.Preco_unitario >= valorMinimo && p.Preco_unitario <= valorMaximo);
+            Console.WriteLine($">>> Produtos com preco entre R${valorMinimo} e R${valorMaximo}");
+            ImprimirRelatorio(produtosResultantes);
+        }catch (FormatException)
+        {
+            // Captura a exceção FormatException se a entrada não puder ser convertida para decimal
+            Console.WriteLine("Entrada inválida. Certifique-se de digitar um número decimal.");
+        }
+        catch (OverflowException)
+        {
+            // Captura a exceção OverflowException se a entrada for muito grande para ser armazenada em um decimal
+            Console.WriteLine("Entrada inválida. O número é muito grande.");
+        }
+        catch (Exception ex)
+        {
+            // Captura outras exceções não tratadas
+            Console.WriteLine("Ocorreu um erro: " + ex.Message);
+        }
+
+        // 3. Informar o valor total do estoque e o valor total de cada produto de acordo com seu estoque.
+        valorTotalEstoque = produtos.Sum(p => p.Qtd_estoque * p.Preco_unitario);
+        
+        Console.WriteLine();
+        Console.WriteLine(">>> Valor total do estoque: ");
+        Console.WriteLine($"Valor total no estoque: R${valorTotalEstoque:C}");
+        Console.WriteLine();
+
+        Console.WriteLine(">>> Valor total de cada produto: ");
+        foreach(var produto in produtos){
+            double precoTotalProduto = produto.Qtd_estoque * produto.Preco_unitario;
+            Console.WriteLine($"Produto: {produto.Nome_produto} | Preco em estoque: R${precoTotalProduto:C}");
+        }
+    }
+
+    private static void ImprimirRelatorio(IEnumerable<Produto> produtos)
+    {
+        
+        foreach( var produto in produtos){
+            Console.WriteLine($"ID: {produto.Id_produto}");
+            Console.WriteLine($"Nome: {produto.Nome_produto}");
+            Console.WriteLine($"Quantidade em Estoque: {produto.Qtd_estoque}");
+            Console.WriteLine($"Preço Unitário: {produto.Preco_unitario.ToString("F2")}");
+            Console.WriteLine("--------------------------------------------");
+        }
+    }
+
 }
