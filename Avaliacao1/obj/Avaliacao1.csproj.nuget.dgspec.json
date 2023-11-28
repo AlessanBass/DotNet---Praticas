@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aless\\OneDrive\\Documentos\\CEPEDI\\Trilhas\\dotnet\\Pratica 3\\Pratica 3.csproj": {}
+    "C:\\Users\\aless\\OneDrive\\Documentos\\CEPEDI\\Trilhas\\dotnet\\Avaliacao1\\Avaliacao1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aless\\OneDrive\\Documentos\\CEPEDI\\Trilhas\\dotnet\\Pratica 3\\Pratica 3.csproj": {
+    "C:\\Users\\aless\\OneDrive\\Documentos\\CEPEDI\\Trilhas\\dotnet\\Avaliacao1\\Avaliacao1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aless\\OneDrive\\Documentos\\CEPEDI\\Trilhas\\dotnet\\Pratica 3\\Pratica 3.csproj",
-        "projectName": "Pratica 3",
-        "projectPath": "C:\\Users\\aless\\OneDrive\\Documentos\\CEPEDI\\Trilhas\\dotnet\\Pratica 3\\Pratica 3.csproj",
+        "projectUniqueName": "C:\\Users\\aless\\OneDrive\\Documentos\\CEPEDI\\Trilhas\\dotnet\\Avaliacao1\\Avaliacao1.csproj",
+        "projectName": "Avaliacao1",
+        "projectPath": "C:\\Users\\aless\\OneDrive\\Documentos\\CEPEDI\\Trilhas\\dotnet\\Avaliacao1\\Avaliacao1.csproj",
         "packagesPath": "C:\\Users\\aless\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aless\\OneDrive\\Documentos\\CEPEDI\\Trilhas\\dotnet\\Pratica 3\\obj\\",
+        "outputPath": "C:\\Users\\aless\\OneDrive\\Documentos\\CEPEDI\\Trilhas\\dotnet\\Avaliacao1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aless\\AppData\\Roaming\\NuGet\\NuGet.Config"
