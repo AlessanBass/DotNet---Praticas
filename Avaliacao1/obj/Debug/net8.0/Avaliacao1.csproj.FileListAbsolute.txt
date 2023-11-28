@@ -1,0 +1,15 @@
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Avaliacao1\bin\Debug\net8.0\Avaliacao1.exe
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Avaliacao1\bin\Debug\net8.0\Avaliacao1.deps.json
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Avaliacao1\bin\Debug\net8.0\Avaliacao1.runtimeconfig.json
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Avaliacao1\bin\Debug\net8.0\Avaliacao1.dll
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Avaliacao1\bin\Debug\net8.0\Avaliacao1.pdb
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Avaliacao1\obj\Debug\net8.0\Avaliacao1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Avaliacao1\obj\Debug\net8.0\Avaliacao1.AssemblyInfoInputs.cache
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Avaliacao1\obj\Debug\net8.0\Avaliacao1.AssemblyInfo.cs
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Avaliacao1\obj\Debug\net8.0\Avaliacao1.csproj.CoreCompileInputs.cache
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Avaliacao1\obj\Debug\net8.0\Avaliacao1.sourcelink.json
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Avaliacao1\obj\Debug\net8.0\Avaliacao1.dll
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Avaliacao1\obj\Debug\net8.0\refint\Avaliacao1.dll
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Avaliacao1\obj\Debug\net8.0\Avaliacao1.pdb
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Avaliacao1\obj\Debug\net8.0\Avaliacao1.genruntimeconfig.cache
+C:\Users\aless\OneDrive\Documentos\CEPEDI\Trilhas\dotnet\Avaliacao1\obj\Debug\net8.0\ref\Avaliacao1.dll
